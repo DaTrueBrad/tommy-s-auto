@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router';
 import './App.css';
 import About from './components/About';
+import Administrator from './components/Administrator';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -14,6 +15,9 @@ function App() {
           <Switch>
             <Route path='/about'>
               <About />
+            </Route>
+            <Route path='/admin'>
+              <Administrator />
             </Route>
             <Route path='/contact'>
               <Contact />
