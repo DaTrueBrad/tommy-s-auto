@@ -3,7 +3,7 @@ import {NavLink, Link} from 'react-router-dom'
 
 function Header() {
   return (
-    <header>
+    <header id='main-header'>
       <img src="/logo2.png" alt="" />
       <nav>
         <NavLink to='/home' activeStyle={{backgroundColor: '#6B172B'}}>Home</NavLink>

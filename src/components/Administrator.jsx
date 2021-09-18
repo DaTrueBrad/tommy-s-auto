@@ -1,19 +1,17 @@
 import React from 'react'
+import {Admin, Resource, ListGuesser} from 'react-admin'
+import restProvider from 'ra-data-simple-rest'
+import CarList from './CarList'
+import CarCreate from './CarCreate'
+import CarEdit from './CarEdit'
+
+const dataProvider = restProvider('http://localhost:3000')
 
 function Administrator() {
   return (
-    <div>
-  <h1>Admin Page</h1>
-    <section id="login-container">
-      
-      <div className="secure-login">
-        <p>Please input your admin info:</p>
-          <input type="text" placeholder='Username'/>
-          <input type="password" placeholder='Admin Password'/>
-          <button>Sign-in</button>
-      </div>
-    </section>
-    </div>
+      <Admin dataProvider={dataProvider}>
+        <Resource name="trucks" list={CarList} create={CarCreate} edit={CarEdit}/>
+      </Admin>
   )
 }
 

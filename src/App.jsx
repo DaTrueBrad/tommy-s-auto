@@ -9,9 +9,9 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <main>
-        <content>
+        <content> */}
           <Switch>
             <Route path='/about'>
               <About />
@@ -22,12 +22,12 @@ function App() {
             <Route path='/contact'>
               <Contact />
             </Route>
-            <Route path='/home'>
+            <Route path='/'>
               <Home />
             </Route>
           </Switch>
-        </content>
-      </main>
+        {/* </content>
+      </main> */}
     </div>
   );
 }
